@@ -5,8 +5,6 @@ int main()
 {
 	setlocale(0, "");
 	string str;
-	string word = "Hello";
-	int k = 0;
 	cout << "Введите строку: ";
 	getline(cin, str);
 	int end = 0;
@@ -43,4 +41,14 @@ int main()
 	{
 		cout << str[i];
 	}
+	cout << "\n";
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == 'H' && str[i + 1] == 'e' && str[i + 2] == 'l' && str[i + 3] == 'l' && str[i + 4] == 'o')
+		{
+			kolhello++;
+			i += 4;
+		}
+	}
+	cout <<"Количество слов 'Hello' = "<< kolhello;
 }
